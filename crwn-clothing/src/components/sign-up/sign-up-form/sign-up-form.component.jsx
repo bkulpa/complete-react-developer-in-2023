@@ -1,5 +1,12 @@
 import { useState } from "react";
 
+import { createAuthUserWithEmailAndPassword } from "../../../utils/firebase/firebase.utils";
+
+const handleSubmit = async (event) => {
+  //dokonczyc dodawanie nowego usera do bazy
+  event.preventDefault();
+};
+
 const defaultFormFields = {
   displayName: "",
   email: "",
