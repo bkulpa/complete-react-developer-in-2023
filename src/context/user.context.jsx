@@ -12,10 +12,6 @@ export const UserContext = createContext({
   setCurrentUser: () => null,
 });
 
-export const USER_ACTION_TYPES = {
-  SET_CURRENT_USER: "SET_CURRENT_USER",
-};
-
 const userReducer = (state, action) => {
   console.log("dispatched");
   console.log(action);
@@ -30,6 +26,10 @@ const userReducer = (state, action) => {
     default:
       throw new Error(`Unhandled type ${type} in userReducer`);
   }
+};
+
+export const USER_ACTION_TYPES = {
+  SET_CURRENT_USER: "SET_CURRENT_USER",
 };
 
 const INITIAL_STATE = {
